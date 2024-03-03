@@ -5,12 +5,30 @@
     <link rel="stylesheet" href="HenHacks-CSS.css">
     <style>
       .fixed-button {
-        position: fixed;
-        bottom: 20px;
-        z-index: 9999;
-        text-align: center;
+          position: fixed;
+          bottom: 20px;
+          z-index: 9999;
+          text-align: center;
       }
-    </style>
+      .container {
+          display: grid;
+          grid-template-columns: 1fr 2fr 1fr; /* Three columns */
+          gap: 20px; /* Gap between columns */
+      }
+      .middle-column {
+          grid-column: 2; /* Middle column */
+      }
+      .middle-column h1 {
+          margin-top: 0; /* Remove default margin for h1 */
+      }
+      .middle-column h2 {
+          margin-top: 20px; /* Add margin for h2 */
+      }
+      .column {
+          display: flex;
+          flex-direction: column;
+      }
+  </style>
   </head>
   
   <body>
@@ -36,10 +54,24 @@
               <button onclick="propertiesOfFunctions()" id="Button" class="propertiesOfFunctions"></button>
           </div>
           <div class="middle-column">
-              <!-- Your content goes here -->
-              <h1>Path Functions</h1>
-              <p>This is where your information goes.</p>
+            <!-- Your content goes here -->
+            <h1>Path Functions</h1>
+            <h2>What is heat? What is Work?</h2>
+            <div class="paragraphs-container">
+              <div class="column">
+                  <h1>Q - Heat</h1>
+                  <p>Definiton:</p>
+                  <p>Uses:</p>
+                  <p>Example:</p>
+              </div>
+              <div class="column">
+                <h1>W - Work</h1>
+                <p>Definiton:</p>
+                <p>Uses:</p>
+                <p>Example:</p>
+              </div>
           </div>
+        </div>
           <div class="right-column">
               <button onclick="propertiesOfPath()" id="Button" class="propertiesOfPathSelected"></button>
               <button onclick="modelSimulation()" id="Button" class="modelSimulation"></button>

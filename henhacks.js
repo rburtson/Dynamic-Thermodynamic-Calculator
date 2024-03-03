@@ -95,18 +95,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		const lockTemperatureCheckbox = document.getElementById('lockTemperature').checked;
 		const lockPressureCheckbox = document.getElementById('lockPressure').checked;
 		const lockVolumeCheckbox = document.getElementById('lockVolume').checked;
-	
-		// Update slider values
+
 		let temperature = parseFloat(temperatureSlider.value);
 		let pressure = parseFloat(pressureSlider.value);
 		let volume = parseFloat(volumeSlider.value);
-	
-		// Update displayed values
+
 		temperatureValueSpan.textContent = temperature.toFixed(0);
 		pressureValueSpan.textContent = pressure.toFixed(3);
 		volumeValueSpan.textContent = volume.toFixed(3);
-	
-		// Determine which slider is moving and update the other sliders accordingly
+
 		if (lockTemperatureCheckbox && !lockPressureCheckbox && !lockVolumeCheckbox) {
 			pressure = pressureSlider.value = temperature * 0.4;
 			volume = volumeSlider.value = temperature * 0.3;
@@ -117,15 +114,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			temperature = temperatureSlider.value = volume / 0.4;
 			pressure = pressureSlider.value = volume / 0.3;
 		}
-	
-		// Update displayed values for the adjusted sliders
+
 		temperatureValueSpan.textContent = temperature.toFixed(0);
 		pressureValueSpan.textContent = pressure.toFixed(3);
 		volumeValueSpan.textContent = volume.toFixed(3);
 	}
 	
-	
-    // Add event listener for all lock checkboxes
     lockTemperatureCheckbox.addEventListener('change', function() {
         if (lockTemperatureCheckbox.checked) {
             lockPressureCheckbox.checked = false;
@@ -150,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {
         updateSliderValues();
     });
 
-    // Add event listener for all sliders
     [temperatureSlider, pressureSlider, volumeSlider].forEach(slider => {
         slider.addEventListener('input', updateSliderValues);
     });

@@ -225,3 +225,13 @@ body{
   height: 10px;
   writing-mode: bt-lr;
 }
+
+.paragraphs-container {
+  display: flex;
+  grid-column: 2;
+}
+
+.column {
+  flex: 1; /* Each paragraph container takes equal space */
+  margin-right: 10px; /* Adjust the space between paragraphs */
+}

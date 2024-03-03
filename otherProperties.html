@@ -1,53 +1,68 @@
 <head>
-    <title>
-      Other Properties
-    </title>
-    <link rel="stylesheet" href="HenHacks-CSS.css">
-    <style>
-      .fixed-button {
-        position: fixed;
-        bottom: 20px;
-        z-index: 9999;
-        text-align: center;
-      }
-    </style>
-  </head>
-  
-  <body>
-    <script src="henhacks.js"></script>
-    <div class=text>
-        <img src="images/logo.png" class="logoLeft">
-        <div class="heading">
-            <h1>
-              Thermodynamics
-            </h1>
-            <p1>
-              The study of energy and how it moves.
-            </p1>
-            <div>
-            </div>
-            The physics of heat, work, and temperature
+  <title>
+    Other Properties of Note
+  </title>
+  <link rel="stylesheet" href="HenHacks-CSS.css">
+  <style>
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      z-index: 9999;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="henhacks.js"></script>
+  <div class=text>
+      <img src="images/logo.png" class="logoLeft">
+      <div class="heading">
+          <h1>
+            Thermodynamics
+          </h1>
+          <p1>
+            The study of energy and how it moves.
+          </p1>
+          <div>
           </div>
-        <img src="images/logo.png" class="logoRight">
-        <div class="container">
-          <div class="left-column">
-              <button onclick="laws()" id="Button" class="law"></button>
-              <button onclick="phasesOfMatter()" id="Button" class="phasesOfMatter"></button>
-              <button onclick="propertiesOfFunctions()" id="Button" class="propertiesOfFunctions"></button>
-          </div>
-          <div class="middle-column">
-              <!-- Your content goes here -->
-              <h1>Other Properties</h1>
-              <p>This is where your information goes.</p>
-          </div>
-          <div class="right-column">
-              <button onclick="propertiesOfPath()" id="Button" class="propertiesOfPath"></button>
-              <button onclick="modelSimulation()" id="Button" class="modelSimulation"></button>
-              <button onclick="otherProperties()" id="Button" class="otherPropertiesSelected"></button>
-          </div>
-      </div>
+          The physics of heat, work, and temperature
         </div>
-        <button class="fixed-button" onclick="homepage()">Homepage</button>
+      <img src="images/logo.png" class="logoRight">
+      <div class="container">
+        <div class="left-column">
+            <button onclick="laws()" id="Button" class="law"></button>
+            <button onclick="phasesOfMatter()" id="Button" class="phasesOfMatter"></button>
+            <button onclick="propertiesOfFunctions()" id="Button" class="propertiesOfFunctionsSelected"></button>
+        </div>
+        <div class="middle-column">
+            <!-- Your content goes here -->
+            <h1>Other Properties</h1>
+            <div class="button-container">
+              <button onclick="temp()" class="temp" id="SFButton"></button>
+              <button onclick="pressure()" class="pressure" id="SFButton"></button>
+              <button onclick="volume()" class="volume" id="SFButton"></button>
+              <button onclick="enthalpy()" class="enthalpy" id="SFButton"></button>
+              <div class="textbox-container">
+                  <h1>
+                      What other noteworthy properties are there?
+                  </h1>
+                  <div>
+                  </div>
+                  <p style="padding: 10px">
+                      One of the most powerful tools in thermodynamics, state functions are snapshots that tell us the current condition of a system at any given moment. These variables can include anything from temperature and pressure in a gas, to the amount of energy or matter within a system. By knowing the state variables, we can understand and predict how a system behaves under different conditions. You can define and calculate any state variable with any other two. 
+                  </p>
+              </div>
+          </div>
+        </div>
+        <div class="right-column">
+            <button onclick="propertiesOfPath()" id="Button" class="propertiesOfPath"></button>
+            <button onclick="modelSimulation()" id="Button" class="modelSimulation"></button>
+            <button onclick="otherProperties()" id="Button" class="otherProperties"></button>
+        </div>
+    </div>
       </div>
-  </body>
-    
+      <button class="fixed-button" onclick="homepage()">Homepage</button>
+    </div>
+</body>
+  
