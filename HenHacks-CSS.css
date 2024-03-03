@@ -1,0 +1,227 @@
+#Button {
+  width: 300px;
+  height: 60px;
+  background-size: cover;
+  border: 0px;
+  font-family: "Mongolian Baiti", serif;
+  margin-bottom: 10px;
+  background-color: #A9ACA9;
+}
+
+#SFButton{
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border: 0px;
+  font-family: "Mongolian Baiti", serif;
+  margin-bottom: 10px;
+  background-color: #A9ACA9;
+}
+
+.logoLeft{
+  position: absolute;
+  margin-top: 1px;
+  left: 330px;
+  height: 200px;
+  width: 200px;
+}
+
+.logoRight{
+  position: absolute;
+  margin-top: 1px;
+  right: 300px;
+  height: 200px;
+  width: 200px;
+}
+
+.textbox-container{
+  z-index: 9999;
+}
+
+body{
+  background-color: #BFC3BA;
+}
+
+.law{
+  background-image: url(images/laws\ of\ thermodynamics\ default\ FINAL.png);
+}
+
+.firstLaw{
+  background-image: url(images/1st\ law.png)
+}
+
+.secondLaw{
+  background-image: url(images/2nd\ law.png)
+}
+
+.thirdLaw{
+  background-image: url(images/3rd\ law.png)
+}
+
+.modelSimulation{
+  background-image: url(images/model\ simulation\ default\ FINAL.png);
+}
+
+.otherProperties{
+  background-image: url(images/other\ properties\ of\ note\ default\ FINAL.png);
+}
+
+.phasesOfMatter{
+  background-image: url(images/phases\ of\ matter\ default\ FINAL.png);
+}
+
+.propertiesOfFunctions{
+  background-image: url(images/properties\ of\ state\ functions\ default\ FINAL.png);
+}
+
+.propertiesOfPath{
+  background-image: url(images/properties\ of\ path\ functions\ default\ FINAL.png);
+}
+
+.lawSelected{
+  background-image: url(images/laws\ of\ thermodynamics\ DP.png);
+}
+
+.modelSimulationSelected{
+  background-image: url(images/model\ simulation\ DP.png);
+}
+
+.otherPropertiesSelected{
+  background-image: url(images/other\ properties\ DP.png);
+}
+
+.phasesOfMatterSelected{
+  background-image: url(images/phases\ of\ matter\ DP.png);
+}
+
+.propertiesOfFunctionsSelected{
+  background-image: url(images/properties\ of\ state\ functions\ DP.png);
+}
+
+.propertiesOfPathSelected{
+  background-image: url(images/properties\ of\ path\ functions\ DP.png);
+}
+
+.temp{
+  background-image: url(images/temperature\ logo.png);
+}
+
+.pressure{
+  background-image: url(images/pressure\ logo.png);
+}
+
+.volume{
+  background-image: url(images/volume\ logo.png);
+}
+
+.enthalpy{
+  background-image: url(images/enthalpy\ logo.png);
+}
+
+.entropy{
+  background-image: url(images/entropy\ logo.png);
+}
+
+.internalEnergy{
+  background-image: url(images/internal\ energy\ logo.png);
+}
+
+.gibbs{
+  background-image: url(images/gibbs\ logo.png);
+}
+
+.helm{
+  background-image: url(images/helmholtz\ logo.png);
+}
+
+.heading{
+  display: inline-block;
+  border: 6px solid #000;
+  padding: 10px;
+  background-color: #ccc;
+  border-color: #60495A;
+}
+
+.text{
+    text-align: center;
+    font-family: "Mongolian Baiti", serif;
+  }
+
+.credits {
+    text-align: center;
+    overflow: auto;
+    position: relative;
+}
+
+.container {
+    display: flex;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.middle-column {
+    flex: 2;
+    padding: 0 20px;
+    border-radius: 10px;
+    border: 6px solid #3F3244;
+    height: 75vh;
+    overflow: auto;
+    background-color: #ccc;
+}
+
+.bottom-button-container {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button-container button {
+  width: calc(50% - 10px); /* Adjust width to create two columns */
+  margin-bottom: 10px; /* Add margin between buttons */
+}
+
+#LButton{
+  width: 126px;
+  height: 60px;
+  background-size: cover;
+  border: 0px;
+  font-family: "Mongolian Baiti", serif;
+  margin-top: 10px;
+  background-color: #A9ACA9;
+}
+
+.slider {
+  margin-bottom: 20px;
+}
+
+.slider label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.slider {
+  margin-bottom: 20px;
+}
+
+.slider label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.slider input[type=range] {
+  width: 150px;
+  height: 10px;
+  writing-mode: bt-lr;
+}

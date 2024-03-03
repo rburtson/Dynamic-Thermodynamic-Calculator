@@ -1,0 +1,55 @@
+<head>
+  <title>
+    The Thermodynamical Duo Henhacks 2024 Project
+  </title>
+  <link rel="stylesheet" href="HenHacks-CSS.css">
+  <style>
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      z-index: 9999;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="henhacks.js"></script>
+  <div class=text>
+    <img src="images/logo.png" class="logoLeft">
+    <div class="heading">
+        <h1>
+          Thermodynamics
+        </h1>
+        <p1>
+          The study of energy and how it moves.
+        </p1>
+        <div>
+        </div>
+        The physics of heat, work, and temperature
+      </div>
+      <img src="images/logo.png" class="logoRight">
+      <div class="container">
+        <div class="left-column">
+            <button onclick="laws()" id="Button" class="law"></button>
+            <button onclick="phasesOfMatter()" id="Button" class="phasesOfMatter"></button>
+            <button onclick="propertiesOfFunctions()" id="Button" class="propertiesOfFunctions"></button>
+        </div>
+        <div class="middle-column">
+            <h1>The Dynamic Thermodynamic Calculator</h1>
+            <p>By: <b>Ryan Burtson</b> (rburtson@udel.edu), <b>Jackson Myers</b> (jmyrs@udel.edu), <b>Collin Owens</b> (crow@udel.edu)</p>
+            <p>Understanding the relationships between thermodynamic properties can be difficult. The objective of this project is to help a newcomer to thermodynamics make and visualize the initial connections that are needed to succeed. </p>
+            <img src="images/CarnotEngineDiagram.png"></img>
+            <p>Shown above is a diagram of the Carnot Engine: T<sub>H</sub> represents the temperature of the hot body, Q<sub>H</sub>, the heat flow from the hot body, Q<sub>C</sub>, the heat flow to the cold body, T<sub>C</sub>, the temperature of the cold body, and W represents the useful energy extracted from the process.</p>
+        </div>
+        <div class="right-column">
+            <button onclick="propertiesOfPath()" id="Button" class="propertiesOfPath"></button>
+            <button onclick="modelSimulation()" id="Button" class="modelSimulation"></button>
+            <button onclick="otherProperties()" id="Button" class="otherProperties"></button>
+        </div>
+    </div>
+      </div>
+      <button class="fixed-button" onclick="homepage()">Homepage</button>
+    </div>
+</body>
+  
