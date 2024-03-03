@@ -88,71 +88,42 @@ document.addEventListener("DOMContentLoaded", function() {
 		const pressureSlider = document.getElementById('pressure');
 		const volumeSlider = document.getElementById('volume');
 	
-		const temperatureValue = document.getElementById('temperatureValue');
-		const pressureValue = document.getElementById('pressureValue');
-		const volumeValue = document.getElementById('volumeValue');
+		const temperatureValueSpan = document.getElementById('temperatureValue');
+		const pressureValueSpan = document.getElementById('pressureValue');
+		const volumeValueSpan = document.getElementById('volumeValue');
 	
-		const lockTemperatureCheckbox = document.getElementById('lockTemperature');
-		const lockPressureCheckbox = document.getElementById('lockPressure');
-		const lockVolumeCheckbox = document.getElementById('lockVolume');
+		const lockTemperatureCheckbox = document.getElementById('lockTemperature').checked;
+		const lockPressureCheckbox = document.getElementById('lockPressure').checked;
+		const lockVolumeCheckbox = document.getElementById('lockVolume').checked;
 	
-		const temperature = parseFloat(temperatureSlider.value);
-		const pressure = parseFloat(pressureSlider.value);
-		const volume = parseFloat(volumeSlider.value);
+		// Update slider values
+		let temperature = parseFloat(temperatureSlider.value);
+		let pressure = parseFloat(pressureSlider.value);
+		let volume = parseFloat(volumeSlider.value);
 	
-		if (!lockTemperatureCheckbox.checked) {
-			temperatureValue.textContent = temperature.toFixed(0);
+		// Update displayed values
+		temperatureValueSpan.textContent = temperature.toFixed(0);
+		pressureValueSpan.textContent = pressure.toFixed(3);
+		volumeValueSpan.textContent = volume.toFixed(3);
+	
+		// Determine which slider is moving and update the other sliders accordingly
+		if (lockTemperatureCheckbox && !lockPressureCheckbox && !lockVolumeCheckbox) {
+			pressure = pressureSlider.value = temperature * 0.4;
+			volume = volumeSlider.value = temperature * 0.3;
+		} else if (!lockTemperatureCheckbox && lockPressureCheckbox && !lockVolumeCheckbox) {
+			temperature = temperatureSlider.value = pressure / 0.3;
+			volume = volumeSlider.value = pressure * 0.4;
+		} else if (!lockTemperatureCheckbox && !lockPressureCheckbox && lockVolumeCheckbox) {
+			temperature = temperatureSlider.value = volume / 0.4;
+			pressure = pressureSlider.value = volume / 0.3;
 		}
 	
-		if (!lockPressureCheckbox.checked) {
-			pressureValue.textContent = pressure.toFixed(3);
-		}
-	
-		if (!lockVolumeCheckbox.checked) {
-			volumeValue.textContent = volume.toFixed(3);
-		}
-	
-		if (lockTemperatureCheckbox.checked) {
-			temperatureSlider.disabled = true;
-			const newPressure = (8.314 * temperature) / volume;
-			pressureSlider.value = newPressure.toFixed(3);
-			pressureValue.textContent = newPressure.toFixed(3);
-	
-			const newVolume = (8.314 * temperature) / newPressure;
-			volumeSlider.value = newVolume.toFixed(3);
-			volumeValue.textContent = newVolume.toFixed(3);
-		} else {
-			temperatureSlider.disabled = false;
-		}
-	
-		if (lockPressureCheckbox.checked) {
-			pressureSlider.disabled = true;
-			const newTemperature = (pressure * volume) / 8.314;
-			if (newTemperature >= 100 && newTemperature <= 500) {
-				temperatureSlider.value = newTemperature.toFixed(0);
-				temperatureValue.textContent = newTemperature.toFixed(0);
-			}
-			const newVolume = (8.314 * newTemperature) / pressure;
-			volumeSlider.value = newVolume.toFixed(3);
-			volumeValue.textContent = newVolume.toFixed(3);
-		} else {
-			pressureSlider.disabled = false;
-		}
-	
-		if (lockVolumeCheckbox.checked) {
-			volumeSlider.disabled = true;
-			const newTemperature = (pressure * volume) / 8.314;
-			if (newTemperature >= 100 && newTemperature <= 500) {
-				temperatureSlider.value = newTemperature.toFixed(0);
-				temperatureValue.textContent = newTemperature.toFixed(0);
-			}
-			const newPressure = (8.314 * newTemperature) / volume;
-			pressureSlider.value = newPressure.toFixed(3);
-			pressureValue.textContent = newPressure.toFixed(3);
-		} else {
-			volumeSlider.disabled = false;
-		}
+		// Update displayed values for the adjusted sliders
+		temperatureValueSpan.textContent = temperature.toFixed(0);
+		pressureValueSpan.textContent = pressure.toFixed(3);
+		volumeValueSpan.textContent = volume.toFixed(3);
 	}
+	
 	
     // Add event listener for all lock checkboxes
     lockTemperatureCheckbox.addEventListener('change', function() {
@@ -184,4 +155,33 @@ document.addEventListener("DOMContentLoaded", function() {
         slider.addEventListener('input', updateSliderValues);
     });
 });
+
+function calcTemp(volumeValue, pressureValue) {
+    return (P * V) / (8.314);
+}
+
+function calcPressure(volumeValue, temperatureValue) {
+    return (T * 8.314) / V;
+}
+
+function calcVolume(pressureValue, temperatureValue) {
+    return (T * 8.314) / P;
+}
+
+
+
+
+function calcTemp(volumeValue, pressureValue) {
+    return (P * V) / (8.314);
+}
+
+function calcPressure(volumeValue, temperatureValue) {
+    return (T * 8.314) / V;
+}
+
+function calcVolume(pressureValue, temperatureValue) {
+    return (T * 8.314) / P;
+}
+
+
 
