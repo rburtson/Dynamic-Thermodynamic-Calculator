@@ -36,18 +36,18 @@
               <button onclick="propertiesOfFunctions()" id="Button" class="propertiesOfFunctions"></button>
           </div>
           <div class="middle-column">
-            <label for="lockTemperature">Lock Pressure/Volume:</label>
+            <h1>Model Simulation</h1>
+            <div></div>
+            <label for="lockTemperature">Varying Temperature:</label>
                 <input type="checkbox" id="lockTemperature">
-                <!-- Checkbox to lock pressure slider -->
-                <label for="lockPressure">Lock Volume/Temp:</label>
+                <label for="lockPressure">Varying Pressure:</label>
                 <input type="checkbox" id="lockPressure">
-                <!-- Checkbox to lock volume slider -->
-                <label for="lockVolume">Lock Pressure/Temp:</label>
+                <label for="lockVolume">Varying Volume:</label>
                 <input type="checkbox" id="lockVolume">
             <div class="slider">
                 <label for="temperature">Temperature (Kelvin):</label>
                 <input type="range" id="temperature" name="temperature" min="1" max="5000" value="300" step="1">
-                <span id="temperatureValue"></span>
+                <span id="temperatureValue" style="z-index: 999;"></span>
             </div>
             
             <div class="slider">

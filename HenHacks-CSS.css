@@ -242,6 +242,7 @@ body{
   writing-mode: bt-lr;
 }
 
+
 .paragraphs-container {
   display: flex;
   grid-column: 2;
