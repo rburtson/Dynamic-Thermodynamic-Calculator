@@ -1,0 +1,71 @@
+<head>
+    <title>
+      Fugacity
+    </title>
+    <link rel="stylesheet" href="HenHacks-CSS.css">
+    <style>
+      .fixed-button {
+        position: fixed;
+        bottom: 20px;
+        z-index: 9999;
+        text-align: center;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <script src="henhacks.js"></script>
+    <div class=text>
+        <img src="images/logo.png" class="logoLeft">
+        <div class="heading">
+            <h1>
+              Thermodynamics
+            </h1>
+            <p1>
+              The study of energy and how it moves.
+            </p1>
+            <div>
+            </div>
+            The physics of heat, work, and temperature
+          </div>
+        <img src="images/logo.png" class="logoRight">
+        <div class="container">
+          <div class="left-column">
+              <button onclick="laws()" id="Button" class="law"></button>
+              <button onclick="phasesOfMatter()" id="Button" class="phasesOfMatter"></button>
+              <button onclick="propertiesOfFunctions()" id="Button" class="propertiesOfFunctionsSelected"></button>
+          </div>
+          <div class="middle-column">
+              <!-- Your content goes here -->
+              <h1>Other Properties</h1>
+              <div class="button-container">
+                <button onclick="constant()" class="constant" id="SFButton"></button>
+                <button onclick="compressibility()" class="compressibility" id="SFButton"></button>
+                <button onclick="fugacity()" class="fugacity" id="SFButton"></button>
+                <button onclick="alpha()" class="alpha" id="SFButton"></button>
+                </div>
+                <div class="textbox-container">
+                    <h1>Fugacity</h1>
+                    <p>Definition: Fugacity is a thermodynamic concept that measures the escaping tendency of a substance from a mixture, capturing its non-ideality in real-world conditions. Unlike pressure or concentration, fugacity accounts for deviations from ideal behavior, especially in gasses and solutions. It provides a more accurate representation of a substance's tendency to move or escape in processes involving non-ideal conditions. Fugacity is crucial in chemical engineering, environmental science, and various industrial applications where precise predictions of substance behavior, particularly in complex mixtures, are essential for process design and environmental impact assessments.</p>
+                    <div>
+                    <p>Formula: Too many to mention. The main one is the partial derivative of Gibbs (see State Functions) </p>
+                    </div>
+                    <div>
+                    <p>Units: Pressure (Pa, bar, atm, etc)</p>
+                    </div>
+                    <div>
+                    <p>Uses: Fugacity finds widespread applications in chemical engineering, environmental science, and industrial processes where accurate predictions of substance behavior are crucial. In chemical engineering, fugacity aids in optimizing reaction conditions and designing efficient separation processes. Environmental scientists use fugacity to assess the movement and impact of pollutants in air, water, and soil. Additionally, industries rely on fugacity for precise predictions in areas such as gas handling, chemical production, and environmental compliance, ensuring that processes are designed and operated with a thorough understanding of substance behavior in real-world conditions.</p>
+                    </div>
+                </div>
+            </div>
+          <div class="right-column">
+              <button onclick="propertiesOfPath()" id="Button" class="propertiesOfPath"></button>
+              <button onclick="modelSimulation()" id="Button" class="modelSimulation"></button>
+              <button onclick="otherProperties()" id="Button" class="otherProperties"></button>
+          </div>
+      </div>
+        </div>
+        <button class="fixed-button" onclick="homepage()">Homepage</button>
+      </div>
+  </body>
+    

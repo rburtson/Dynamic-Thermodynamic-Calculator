@@ -70,6 +70,22 @@ function thirdLaw(){
 	window.location.href = "thirdLaw.html"
 }
 
+function constant(){
+	window.location.href = "constant.html"
+}
+
+function compressibility(){
+	window.location.href = "compressibility.html"
+}
+
+function alpha(){
+	window.location.href = "alpha.html"
+}
+
+function fugacity(){
+	window.location.href = "fugacity.html"
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const temperatureSlider = document.getElementById('temperature');
     const pressureSlider = document.getElementById('pressure');

@@ -134,6 +134,22 @@ body{
   background-image: url(images/helmholtz\ logo.png);
 }
 
+.constant{
+  background-image: url(images/constant\ logo.png);
+}
+
+.compressibility{
+  background-image: url(images/compressibility\ logo.png);
+}
+
+.fugacity{
+  background-image: url(images/fugacity\ logo.png);
+}
+
+.alpha{
+  background-image: url(images/alpha\ logo.png);
+}
+
 .heading{
   display: inline-block;
   border: 6px solid #000;
